@@ -35,7 +35,9 @@ regressor_opt = lm(formula = Profit ~ R.D.Spend ,
                    data = training_set)
 y_pred_opt = predict(regressor_opt, newdata = test_set)
 
-# #automating backward elimination using this formula 
+
+
+# #automating backward elimination using this formula
 # backwardElimination <- function(x, sl) {
 #   numVars = length(x)
 #   for (i in c(1:numVars)){
@@ -49,36 +51,7 @@ y_pred_opt = predict(regressor_opt, newdata = test_set)
 #   }
 #   return(summary(regressor))
 # }
-# 
+#
 # SL = 0.05
 # dataset = dataset[, c(1,2,3,4,5)]
 # backwardElimination(training_set, SL)
-
-
-
-# # Importing the dataset
-# dataset = read.csv('50_Startups.csv')
-# 
-# # Encoding categorical data
-# dataset$State = factor(dataset$State,
-#                        levels = c('New York', 'California', 'Florida'),
-#                        labels = c(1, 2, 3))
-# 
-# # Splitting the dataset into the Training set and Test set
-# # install.packages('caTools')
-# library(caTools)
-# set.seed(123)
-# split = sample.split(dataset$Profit, SplitRatio = 0.8)
-# training_set = subset(dataset, split == TRUE)
-# test_set = subset(dataset, split == FALSE)
-# 
-# # Feature Scaling
-# # training_set = scale(training_set)
-# # test_set = scale(test_set)
-# 
-# # Fitting Multiple Linear Regression to the Training set
-# regressor = lm(formula = Profit ~ .,
-#                data = training_set)
-# 
-# # Predicting the Test set results
-# y_pred = predict(regressor, newdata = test_set)

@@ -1,6 +1,6 @@
 # Data Preprocessing
 #' Created on Thu Dec 27 21:43:37 2018
-#' template for data pre processing 
+#' template for data pre processing
 #' -Imports libraries
 #' -Imports the dataset
 #' -Spliting it into training-set and testing set
@@ -20,8 +20,7 @@ training_set = subset(dataset, split == TRUE)
 test_set = subset(dataset, split == FALSE)
 
 
-##feature scaling 
+##feature scaling
 
 # training_set[, 2:3] = scale(training_set[, 2:3])
 # test_set[, 2:3] = scale(test_set[, 2:3])
-
