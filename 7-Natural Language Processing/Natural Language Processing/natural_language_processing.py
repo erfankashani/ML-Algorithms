@@ -32,8 +32,7 @@ cv = CountVectorizer(max_features = 1500)
 X = cv.fit_transform(corpus).toarray()
 y = dataset.iloc[:, 1].values
 
-#training the sparks matrox with our classificaition models
-
+#training the sparks matrox with our classificaition model
 #spliting / making trainingset and test set
 from sklearn.model_selection import train_test_split
 X_train, X_test, y_train, y_test = train_test_split(X,y , test_size = 0.20, random_state = 0)
