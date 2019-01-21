@@ -11,6 +11,7 @@ X = dataset.iloc[:, [3,4]].values #takinf all the culums -1 and taking all the r
 
 #use dendrogram to find the the optimal number of clusters
 import scipy.cluster.hierarchy as sch
+
 # creating the dendrogram // with linkage method which is the hierchial clustering // using wand method which minimizes the varience within each cluster
 dendrogram = sch.dendrogram(sch.linkage(X, method = 'ward'))
 plt.title("Dendrogram")
